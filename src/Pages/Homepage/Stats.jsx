@@ -1,39 +1,56 @@
 import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import StatItem from './StatItem';
 import { ReactComponent as HealthIcon } from '../../assets/svg/health.svg';
+import { ReactComponent as PaymentIcon } from '../../assets/svg/payment.svg';
+import { ReactComponent as MedicalIcon } from '../../assets/svg/medical.svg';
+import { ReactComponent as WarningIcon } from '../../assets/svg/warning.svg';
 
-const StatItem = () => {
-  <Box
-    sx={{
-      display: 'flex',
-      flexDirection: 'column',
-      flex: '1 1 0%',
-      minHeight: 152,
-      border: '1px solid #01A768',
-      borderRadius: '4px',
-    }}
-  >
-    <Box
-      sx={{
-        flex: '1 1 0%',
-        display: 'flex',
-        placeItems: 'center',
-        // justifyContent: 'center',
-        // alignItems: 'center',
-      }}
-    >
-      <HealthIcon />
-      <Typography>Inventory Status</Typography>
-    </Box>
-    <Typography sx={{ textAlign: 'center', py: 1, bgcolor: '#01A768' }}>
-      View Detailed Report
-    </Typography>
-  </Box>;
-};
+const stats = [
+  {
+    icon: <HealthIcon />,
+    bold: 'GOOD',
+    body: 'Inventory Status',
+    caption: 'View Detailed Report',
+    color: '#01A7685d',
+  },
+  {
+    icon: <PaymentIcon />,
+    bold: 'Rs. 8,55,875',
+    body: 'Revenue :Jan 2022',
+    caption: 'View Detailed Report',
+    color: '#FED6005d',
+  },
+  {
+    icon: <MedicalIcon />,
+    bold: '298',
+    body: 'Medicines Available',
+    caption: 'Visit Inventory',
+    color: '#03A9F55d',
+  },
+  {
+    icon: <WarningIcon />,
+    bold: '01',
+    body: 'Medicine Shortage',
+    caption: 'Resolve now',
+    color: '#F0483E5d',
+  },
+];
 
 const Stats = () => {
-  return <Box sx={{ display: 'flex', gap: 4 }}></Box>;
+  return (
+    <Box sx={{ display: 'flex', gap: 4, mt: '1.625rem' }}>
+      {stats.map(({ icon, bold, body, caption, color }) => (
+        <StatItem
+          key={bold}
+          icon={icon}
+          bold={bold}
+          body={body}
+          caption={caption}
+          color={color}
+        />
+      ))}
+    </Box>
+  );
 };
 
 export default Stats;
