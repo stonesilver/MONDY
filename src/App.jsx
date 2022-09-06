@@ -3,9 +3,13 @@ import './App.css';
 import AppLayout from './Layout/AppLayout';
 import Homepage from './Pages/Homepage/Homepage';
 import Inventory from './Pages/Inventory/Inventory';
-
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Box from '@mui/material/Box';
+import MobileScreenError from './Layout/MobileScreenError'
 const App = () => {
-  return (
+  const matches = useMediaQuery('(min-width:1024px)');
+
+  return matches ? (
     <AppLayout>
       <Routes>
         <Route path='/' element={<Navigate to='/dashboard' />} />
@@ -13,6 +17,8 @@ const App = () => {
         <Route path='inventory' element={<Inventory />} />
       </Routes>
     </AppLayout>
+  ) : (
+    <MobileScreenError />
   );
 };
 
