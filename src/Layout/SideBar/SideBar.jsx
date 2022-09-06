@@ -90,7 +90,7 @@ const Navbar = () => {
       sx={{
         flex: '1 1 20%',
         bgcolor: 'secondary.light',
-        height: '100vh',
+        minHeight: '100vh',
         overflowY: 'auto',
       }}
     >
@@ -133,7 +133,6 @@ const Navbar = () => {
                 width: '2.625rem',
                 height: '2.625rem',
                 borderRadius: '4px',
-                // overflow: 'hidden',
                 '&::before': {
                   content: `''`,
                   position: 'absolute',
