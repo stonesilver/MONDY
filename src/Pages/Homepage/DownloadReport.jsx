@@ -35,7 +35,7 @@ const DownloadReport = () => {
   };
   return (
     <div>
-      <Tooltip title='Admin menu'>
+      <Tooltip title='Download report'>
         <Button
           onClick={handleClick}
           variant='outlined'
@@ -45,9 +45,10 @@ const DownloadReport = () => {
             width: 192,
             color: 'secondary.main',
             bgcolor: 'white.main',
+            fontSize: '0.875rem',
             textTransform: 'capitalize',
           }}
-          aria-controls={open ? 'Admin-menu' : undefined}
+          aria-controls={open ? 'Download report' : undefined}
           aria-haspopup='true'
           aria-expanded={open ? 'true' : undefined}
           endIcon={<ChevronDownIcon style={{ fill: '#000000' }} />}
@@ -57,7 +58,7 @@ const DownloadReport = () => {
       </Tooltip>
       <Menu
         anchorEl={anchorEl}
-        id='Admin-menu'
+        id='Download report'
         open={open}
         onClose={handleClose}
         onClick={handleClose}

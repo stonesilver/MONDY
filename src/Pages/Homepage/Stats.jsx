@@ -38,7 +38,7 @@ const stats = [
 
 const Stats = () => {
   return (
-    <Box sx={{ display: 'flex', gap: 4, mt: '1.625rem' }}>
+    <Box sx={{ display: 'flex', gap: 4, mt: '1.625rem', mb: 4, px: 5 }}>
       {stats.map(({ icon, bold, body, caption, color }) => (
         <StatItem
           key={bold}

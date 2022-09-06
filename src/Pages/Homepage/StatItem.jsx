@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { ReactComponent as HealthIcon } from '../../assets/svg/health.svg';
+import { ReactComponent as ForwardIcon } from '../../assets/svg/forward.svg';
 
 const StatItem = ({ icon, bold, body, caption, color }) => (
   <Box
@@ -39,7 +39,7 @@ const StatItem = ({ icon, bold, body, caption, color }) => (
         py: '3px',
       }}
     >
-      {caption}
+      {caption} <ForwardIcon style={{ marginLeft: '5px' }} />
     </Typography>
   </Box>
 );

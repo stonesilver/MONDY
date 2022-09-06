@@ -5,7 +5,12 @@ import DownloadReport from './DownloadReport';
 
 const TitleBar = () => {
   return (
-    <Stack direction='row' justifyContent='space-between' alignItems='center'>
+    <Stack
+      direction='row'
+      justifyContent='space-between'
+      alignItems='center'
+      px={5}
+    >
       <Box>
         <Typography sx={{ fontSize: '1.5rem', fontWeight: 700 }}>
           Dashboard
