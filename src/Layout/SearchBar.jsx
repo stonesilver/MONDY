@@ -12,7 +12,7 @@ const SearchBar = () => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     if (!searchInput) return;
     alert(`Searching ${searchInput}....`);
   };
@@ -20,14 +20,18 @@ const SearchBar = () => {
     <Box
       component='form'
       onSubmit={handleSubmit}
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+      sx={{
+        p: '2px 4px',
+        display: 'flex',
+        width: '100%',
+        backgroundColor: '#b7c1ca6e',
+        borderRadius: '4px',
+      }}
     >
       <InputBase
         sx={{
           ml: 1,
           flex: 1,
-          backgroundColor: '#E3EBF3',
-          border: '1px solid gray',
         }}
         value={searchInput}
         onChange={handleChange}
