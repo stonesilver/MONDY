@@ -29,39 +29,35 @@ body {
   font-size: 0.875rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@font-face {
+  font-family: Poppins;
+  font-weight: 700;
+  src: url('/fonts/Poppins-Bold.ttf');
+  format: ('ttf');
+  font-style: normal;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+@font-face {
+  font-family: Poppins;
+  font-weight: 600;
+  src: url('/fonts/Poppins-SemiBold.ttf');
+  format: ('ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  src: url('/fonts/Poppins-Medium.ttf');
+  format: ('ttf');
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+@font-face {
+  font-family: Poppins, Helvetica;
+  src: url('/fonts/Poppins-Regular.ttf');
+  format: ('ttf');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
 }

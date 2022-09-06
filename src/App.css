@@ -1,17 +1,11 @@
 #root {
   margin: 0 auto;
-  text-align: center;
 }
 
 .App {
   display: flex;
 
   min-height: 100vh;
-}
-
-.main-content {
-  flex: 1 1 80%;
-  border: 1px solid #29e9e9;
 }
 
 @media (prefers-reduced-motion: no-preference) {
