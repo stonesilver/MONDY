@@ -43,6 +43,7 @@ const MenuItem = ({ name, icon, subItem, link, pathname }) => {
         {Boolean(subItem) && (
           <ChevronDownIcon
             style={{
+              fill: '#ffffff',
               transform: `rotate(${open ? '180' : '0'}deg)`,
               transition: 'transform 0.3s ease-in-out',
             }}
