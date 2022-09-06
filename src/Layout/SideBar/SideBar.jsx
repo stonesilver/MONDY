@@ -88,9 +88,11 @@ const Navbar = () => {
   return (
     <Box
       sx={{
+        position: 'sticky',
+        top: 0,
         flex: '1 1 20%',
         bgcolor: 'secondary.light',
-        minHeight: '100vh',
+        height: '100vh',
         overflowY: 'auto',
       }}
     >
