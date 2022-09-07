@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
-import { ReactComponent as SearchIcon } from '../assets/svg/search.svg';
+import { ReactComponent as SearchIcon } from '../../assets/svg/search.svg';
 
 const SearchBar = () => {
   const [searchInput, setSearchInput] = useState('');

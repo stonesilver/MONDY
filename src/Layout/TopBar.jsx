@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import SearchBar from './SearchBar';
+import SearchBar from '../components/base/SearchBar';
 import Translate from './Translate';
 
 const TopBar = () => {
