@@ -8,7 +8,7 @@ const StatItem = ({ icon, bold, body, caption, color }) => (
       display: 'flex',
       flexDirection: 'column',
       flex: '1',
-      height: '152px',
+      height: 152,
       border: `1px solid ${color}`,
       borderRadius: '4px',
       overflow: 'hidden',

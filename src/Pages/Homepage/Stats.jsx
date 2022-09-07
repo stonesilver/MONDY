@@ -21,7 +21,7 @@ const stats = [
     color: '#FED6005d',
   },
   {
-    icon: <MedicalIcon />,
+    icon: <MedicalIcon style={{ fill: '#03A9F5' }} />,
     bold: '298',
     body: 'Medicines Available',
     caption: 'Visit Inventory',
