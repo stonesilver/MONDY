@@ -4,7 +4,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const CustomSelect = () => {
+const CustomSelect = ({ options }) => {
   const [option, setOption] = useState('- Select Group -');
 
   const handleChange = (event) => {
@@ -24,9 +24,11 @@ const CustomSelect = () => {
           <MenuItem disabled value='- Select Group -'>
             <em>- Select Group -</em>
           </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          {options.map((item) => (
+            <MenuItem key={item} value={item}>
+              {item}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
     </Box>

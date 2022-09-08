@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import MedicineListTable from './MedicineListTable';
 import SearchFilter from './SearchFilter';
 import TitleBar from './TitleBar.medicineList';
 
@@ -7,6 +8,7 @@ const MedicineList = () => {
     <Box px={5}>
       <TitleBar />
       <SearchFilter />
+      <MedicineListTable />
     </Box>
   );
 };

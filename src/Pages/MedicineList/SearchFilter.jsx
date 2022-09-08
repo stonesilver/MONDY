@@ -12,7 +12,13 @@ const SearchFilter = () => {
       alignItems='center'
       mt={2}
     >
-      <Box sx={{ width: 304 }}>
+      <Box
+        sx={{
+          width: 304,
+          borderRadius: '4px',
+          border: (t) => `1px solid ${t.palette.secondary.main}5d`,
+        }}
+      >
         <SearchBar placeholder='Search Medicine Inventory..' />
       </Box>
 
@@ -23,7 +29,7 @@ const SearchFilter = () => {
         sx={{ width: 'fit-content' }}
       >
         <FilterIcon />
-        <Select />
+        <Select options={['Group One', 'Group Two', 'Group Three']} />
       </Stack>
     </Stack>
   );

@@ -38,7 +38,7 @@ const SearchBar = ({ placeholder }) => {
         placeholder={placeholder}
         inputProps={{ 'aria-label': 'Search for anything here..' }}
       />
-      <IconButton type='button' sx={{ p: '10px' }} aria-label='search'>
+      <IconButton type='submit' sx={{ p: '10px' }} aria-label='search'>
         <SearchIcon />
       </IconButton>
     </Box>
