@@ -2,6 +2,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import DownloadReport from './DownloadReport';
+import PageTitle from '../../components/PageTitle';
 
 const TitleBar = () => {
   return (
@@ -11,12 +12,10 @@ const TitleBar = () => {
       alignItems='center'
       px={5}
     >
-      <Box>
-        <Typography sx={{ fontSize: '1.5rem', fontWeight: 700 }}>
-          Dashboard
-        </Typography>
-        <Typography>A quick data overview of the inventory.</Typography>
-      </Box>
+      <PageTitle
+        options={['Dashboard']}
+        subtitle='A quick data overview of the inventory.'
+      />
       <Box sx={{ border: '1px solid gray', borderRadius: '4px' }}>
         <DownloadReport />
       </Box>

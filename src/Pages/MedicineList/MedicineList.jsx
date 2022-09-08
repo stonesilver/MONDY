@@ -1,16 +1,20 @@
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import PageTitle from '../../components/PageTitle';
-
-const options = ['Inventory', 'List of Medicines (298)'];
+import Stack from '@mui/material/Stack';
+import SearchBar from '../../components/base/SearchBar';
+import TitleBar from './TitleBar.medicineList';
 
 const MedicineList = () => {
   return (
     <Box px={5}>
-      <PageTitle
-        options={options}
-        subtitle='List of medicines available for sales.'
-      />
+      <TitleBar />
+      <Stack
+        direction='row'
+        justifyContent='space-between'
+        alignItems='center'
+        mt={2}
+      >
+        <SearchBar placeholder='Search Medicine Inventory..' />
+      </Stack>
     </Box>
   );
 };

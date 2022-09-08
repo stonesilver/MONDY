@@ -6,14 +6,9 @@ import PageTitle from '../../components/PageTitle';
 
 const TitleBar = () => {
   return (
-    <Stack
-      direction='row'
-      justifyContent='space-between'
-      alignItems='center'
-      px={5}
-    >
+    <Stack direction='row' justifyContent='space-between' alignItems='center'>
       <PageTitle
-        options={['Inventory']}
+        options={['Inventory', 'List of Medicines (298)']}
         subtitle='List of medicines available for sales.'
       />
       <Button

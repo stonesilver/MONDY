@@ -1,10 +1,11 @@
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import { ReactComponent as ChevronDown } from '../assets/svg/chevron-down.svg';
 
 const PageTitle = ({ options, subtitle }) => {
   return (
-    <>
+    <Box>
       <Stack direction='row'>
         {options.map((item, index) => (
           <Typography
@@ -34,7 +35,7 @@ const PageTitle = ({ options, subtitle }) => {
         ))}
       </Stack>
       <Typography>{subtitle}</Typography>
-    </>
+    </Box>
   );
 };
 
