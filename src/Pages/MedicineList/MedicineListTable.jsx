@@ -5,57 +5,45 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
-function createData(name, calories, fat, carbs) {
-  return { name, calories, fat, carbs, protein: 'View Full Detail' };
-}
-
-const rows = [
-  createData(
-    'Augmentin 625 Duo Tablet',
-    'D06ID232435454',
-    'Generic Medicine',
-    350
-  ),
-  createData('Azithral 500 Tablet', 'D06ID232435451', 'Generic Medicine', 20),
-  createData('Ascoril LS Syrup', 'D06ID232435452', 'Diabetes ', 85),
-  createData('Azee 500 Tablet', 'D06ID232435450', 'Generic Medicine', 75),
-  createData('Allegra 120mg Tablet', 'D06ID232435455', 'Diabetes', 44),
-  createData('Alex Syrup', 'D06ID232435456', 'Generic Medicine', 65),
-  createData('Amoxyclav 625 Tablet', 'D06ID232435457', 'Generic Medicine', 150),
-  createData('Avil 25 Tablet', 'D06ID232435458', 'Generic Medicine', 270),
-];
-
-const headerStyle = { fontSize: 16, fontWeight: 500 };
+import SortOrderIcon from './SortOrderIcon';
+import { rows, tableTitle, headerStyle } from './tableDummyData';
+import { Link } from 'react-router-dom';
 
 const MedicineListTable = () => {
   return (
     <TableContainer component={Paper} sx={{ mt: 2 }}>
       <Table sx={{ minWidth: 650 }} aria-label='table'>
+        {/* Table head */}
         <TableHead>
           <TableRow>
-            <TableCell sx={headerStyle}>Medicine Name</TableCell>
-            <TableCell sx={headerStyle}>Medicine ID</TableCell>
-            <TableCell sx={headerStyle}>Group Name</TableCell>
-            <TableCell sx={headerStyle}>Stock in Qty</TableCell>
-            <TableCell sx={headerStyle}>Action</TableCell>
+            {tableTitle.map((item, index) => (
+              <TableCell key={item} sx={headerStyle}>
+                {item} {index + 1 !== tableTitle.length && <SortOrderIcon />}
+              </TableCell>
+            ))}
           </TableRow>
         </TableHead>
+
+        {/* Table body */}
         <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component='th' scope='row'>
-                {row.name}
-              </TableCell>
-              <TableCell>{row.calories}</TableCell>
-              <TableCell>{row.fat}</TableCell>
-              <TableCell>{row.carbs}</TableCell>
-              <TableCell>{row.protein}</TableCell>
-            </TableRow>
-          ))}
+          {rows.map(
+            ({ medicineName, id, groupName, quantityInStock, action }) => (
+              <TableRow
+                key={id}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell component='th' scope='row'>
+                  {medicineName}
+                </TableCell>
+                <TableCell>{id}</TableCell>
+                <TableCell>{groupName}</TableCell>
+                <TableCell>{quantityInStock}</TableCell>
+                <Link to={`/${medicineName.replaceAll(' ', '_')}/${id}`}>
+                  <TableCell>{action}</TableCell>
+                </Link>
+              </TableRow>
+            )
+          )}
         </TableBody>
       </Table>
     </TableContainer>
