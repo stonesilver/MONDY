@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import StatItem from './StatItem';
+import StatItem from '../../components/StatItem';
 import { ReactComponent as HealthIcon } from '../../assets/svg/health.svg';
 import { ReactComponent as PaymentIcon } from '../../assets/svg/payment.svg';
 import { ReactComponent as MedicalIcon } from '../../assets/svg/medical.svg';

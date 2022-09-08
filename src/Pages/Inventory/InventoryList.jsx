@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import { ReactComponent as MedicalIcon } from '../../assets/svg/medical.svg';
 import { ReactComponent as WarningIcon } from '../../assets/svg/warning.svg';
-import StatItem from '../Homepage/StatItem';
+import StatItem from '../../components/StatItem';
 
 const inventory = [
   {

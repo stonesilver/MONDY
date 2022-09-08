@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import StatsGridCard from './StatsGridCard';
+import StatsGridCard from '../../components/StatsGridCard';
 
 const stat = [
   {

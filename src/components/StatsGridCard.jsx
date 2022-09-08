@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { ReactComponent as ForwardIcon } from '../../assets/svg/forward.svg';
+import { ReactComponent as ForwardIcon } from '../assets/svg/forward.svg';
 
 const StatsGridCard = ({ category, more, details }) => {
   return (

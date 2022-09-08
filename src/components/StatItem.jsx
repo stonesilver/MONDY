@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { ReactComponent as ForwardIcon } from '../../assets/svg/forward.svg';
+import { ReactComponent as ForwardIcon } from '../assets/svg/forward.svg';
 
 const StatItem = ({ icon, bold, body, caption, color }) => (
   <Box
