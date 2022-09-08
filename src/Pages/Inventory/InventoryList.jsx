@@ -1,4 +1,3 @@
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { ReactComponent as MedicalIcon } from '../../assets/svg/medical.svg';
 import { ReactComponent as WarningIcon } from '../../assets/svg/warning.svg';
