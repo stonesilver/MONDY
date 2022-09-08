@@ -1,20 +1,29 @@
 import Stack from '@mui/material/Stack';
 import Button from '../../components/base/Button';
 import PageTitle from '../../components/PageTitle';
+import { ReactComponent as EditIcon } from '../../assets/svg/edit.svg';
+import { useParams } from 'react-router-dom';
 
 const TitleBar = () => {
+  const { medicineName } = useParams();
+
   return (
     <Stack direction='row' justifyContent='space-between' alignItems='center'>
       <PageTitle
-        options={['Inventory', 'List of Medicines (298)']}
+        options={[
+          'Inventory',
+          'List of Medicines',
+          medicineName.replaceAll('_', ' '),
+        ]}
         subtitle='List of medicines available for sales.'
       />
       <Button
         variant='contained'
         size='large'
-        bgColor='red.main'
+        icon={<EditIcon />}
+        bgColor='blue.main'
         textColor='white.main'
-        text='+ Add New Item'
+        text='Edit Details'
       />
     </Stack>
   );

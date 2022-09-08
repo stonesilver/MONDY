@@ -7,6 +7,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import MobileScreenError from './Layout/MobileScreenError';
 import PageNotFound from './Layout/PageNotFound';
 import MedicineList from './Pages/MedicineList/MedicineList';
+import MedicineDetail from './Pages/MedicineDetail/MedicineDetail';
 
 const InventoryOutlet = () => (
   <>
@@ -25,6 +26,10 @@ const App = () => {
         <Route path='inventory' element={<InventoryOutlet />}>
           <Route index element={<Inventory />} />
           <Route path='medicine-list' element={<MedicineList />} />
+          <Route
+            path='medicine-list/:medicineName/:medicineID'
+            element={<MedicineDetail />}
+          />
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes>

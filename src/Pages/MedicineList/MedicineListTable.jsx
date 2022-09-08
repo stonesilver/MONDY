@@ -53,7 +53,7 @@ const MedicineListTable = () => {
                   <TableCell>{id}</TableCell>
                   <TableCell>{groupName}</TableCell>
                   <TableCell>{quantityInStock}</TableCell>
-                  <Link to={`/${medicineName.replaceAll(' ', '_')}/${id}`}>
+                  <Link to={`${medicineName.replaceAll(' ', '_')}/${id}`}>
                     <TableCell>{action}</TableCell>
                   </Link>
                 </TableRow>
