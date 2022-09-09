@@ -17,7 +17,7 @@ const AppLayout = ({ children }) => {
           sx={{
             height: 'calc(100% - 60px)',
             overflowY: 'auto',
-            pt: 4,
+            py: 4,
           }}
         >
           {children}

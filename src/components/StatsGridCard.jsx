@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { ReactComponent as ForwardIcon } from '../assets/svg/forward.svg';
 
-const StatsGridCard = ({ category, more, details }) => {
+const StatsGridCard = ({ category, more, details, text }) => {
   return (
     <Box
       sx={{
@@ -41,6 +41,11 @@ const StatsGridCard = ({ category, more, details }) => {
             </Box>
           ))}
         </Box>
+      )}
+      {text && (
+        <Typography py={2} px={3}>
+          {text}
+        </Typography>
       )}
     </Box>
   );
