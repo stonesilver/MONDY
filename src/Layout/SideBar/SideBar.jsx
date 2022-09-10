@@ -14,7 +14,7 @@ import { ReactComponent as ChatIcon } from '../../assets/svg/chat.svg';
 import { ReactComponent as ApplicationIcon } from '../../assets/svg/application.svg';
 import { ReactComponent as CovidIcon } from '../../assets/svg/covid.svg';
 import { ReactComponent as HelpIcon } from '../../assets/svg/help.svg';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const menuItems = [
   {
@@ -96,29 +96,31 @@ const Navbar = () => {
         overflowY: 'auto',
       }}
     >
-      <Stack
-        direction='row'
-        alignItems='center'
-        spacing={1}
-        sx={{ bgcolor: 'secondary.main', height: 60, px: 3 }}
-      >
-        <Box sx={{ width: 42, height: 42 }}>
-          <img
-            src='/img/brand-logo.webp'
-            alt='brand logo'
-            sx={{ width: '100%', height: '100%' }}
-          />
-        </Box>
-        <Typography
-          sx={{
-            fontSize: { xs: 16, lg: 18 },
-            color: 'white.main',
-            fontWeight: 600,
-          }}
+      <Link to='/'>
+        <Stack
+          direction='row'
+          alignItems='center'
+          spacing={1}
+          sx={{ bgcolor: 'secondary.main', height: 60, px: 3 }}
         >
-          Pharma One
-        </Typography>
-      </Stack>
+          <Box sx={{ width: 42, height: 42 }}>
+            <img
+              src='/img/brand-logo.webp'
+              alt='brand logo'
+              sx={{ width: '100%', height: '100%' }}
+            />
+          </Box>
+          <Typography
+            sx={{
+              fontSize: { xs: 16, lg: 18 },
+              color: 'white.main',
+              fontWeight: 600,
+            }}
+          >
+            Pharma One
+          </Typography>
+        </Stack>
+      </Link>
       <Box>
         <Stack
           direction='row'

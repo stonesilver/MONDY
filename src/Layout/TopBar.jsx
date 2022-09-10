@@ -8,12 +8,16 @@ const TopBar = () => {
   return (
     <Box
       sx={{
+        position: 'sticky',
+        top: 0,
         display: 'flex',
         alignItems: 'center',
         height: 60,
+        bgcolor: 'primary.main',
         px: 5,
         py: '0.625rem',
-        borderBottom: '1px solid #1D242E6e',
+        boxShadow: '0 1px 4px #1D242E6e',
+        zIndex: '5',
       }}
     >
       <Box sx={{ flex: '1 1 40%' }}>
