@@ -7,6 +7,7 @@ const TButton = ({
   textColor,
   size,
   variant,
+  handleClick,
   ...props
 }) => {
   return (
@@ -14,7 +15,13 @@ const TButton = ({
       variant={variant}
       startIcon={icon ? icon : null}
       size={size}
-      sx={{ bgcolor: bgColor, color: textColor, ...props }}
+      sx={{
+        bgcolor: bgColor,
+        color: textColor,
+        ...props,
+        '&:hover': { bgcolor: bgColor, transform: 'scale(1.03)', ...props },
+      }}
+      onClick={handleClick}
     >
       {text}
     </Button>
@@ -24,6 +31,7 @@ const TButton = ({
 TButton.defaultProps = {
   textColor: 'white.main',
   size: 'large',
+  handleClick: () => {},
 };
 
 export default TButton;

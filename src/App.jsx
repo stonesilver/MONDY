@@ -8,6 +8,7 @@ import MobileScreenError from './Layout/MobileScreenError';
 import PageNotFound from './Layout/PageNotFound';
 import MedicineList from './Pages/MedicineList/MedicineList';
 import MedicineDetail from './Pages/MedicineDetail/MedicineDetail';
+import AddMedicine from './Pages/AddMedicine/AddMedicine';
 
 const InventoryOutlet = () => (
   <>
@@ -30,6 +31,7 @@ const App = () => {
             path='medicine-list/:medicineName/:medicineID'
             element={<MedicineDetail />}
           />
+          <Route path='medicine-list/add-medicine' element={<AddMedicine />} />
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes>

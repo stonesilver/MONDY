@@ -1,16 +1,9 @@
-import { useState } from 'react';
 import Box from '@mui/material/Box';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const CustomSelect = ({ options }) => {
-  const [option, setOption] = useState('- Select Group -');
-
-  const handleChange = (event) => {
-    setOption(event.target.value);
-  };
-
+const CustomSelect = ({ options, option, handleChange }) => {
   return (
     <Box sx={{ minWidth: 217 }}>
       <FormControl fullWidth sx={{ bgcolor: 'white.main' }}>

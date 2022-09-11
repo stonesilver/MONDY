@@ -1,8 +1,11 @@
 import Stack from '@mui/material/Stack';
 import Button from '../../components/base/Button';
 import PageTitle from '../../components/PageTitle';
+import { useNavigate } from 'react-router-dom';
 
 const TitleBar = () => {
+  const navigate = useNavigate();
+
   return (
     <Stack direction='row' justifyContent='space-between' alignItems='center'>
       <PageTitle
@@ -15,6 +18,7 @@ const TitleBar = () => {
         bgColor='red.main'
         textColor='white.main'
         text='+ Add New Item'
+        handleClick={() => navigate('/inventory/medicine-list/add-medicine')}
       />
     </Stack>
   );

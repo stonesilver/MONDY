@@ -1,10 +1,17 @@
+import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Select from '../../components/base/Select';
+import CustomSelect from '../../components/base/Select';
 import SearchBar from '../../components/base/SearchBar';
 import { ReactComponent as FilterIcon } from '../../assets/svg/filter.svg';
 
 const SearchFilter = () => {
+  const [option, setOption] = useState('- Select Group -');
+
+  const handleChange = (event) => {
+    setOption(event.target.value);
+  };
+
   return (
     <Stack
       direction='row'
@@ -29,7 +36,11 @@ const SearchFilter = () => {
         sx={{ width: 'fit-content' }}
       >
         <FilterIcon />
-        <Select options={['Group One', 'Group Two', 'Group Three']} />
+        <CustomSelect
+          options={['Group One', 'Group Two', 'Group Three']}
+          option={option}
+          handleChange={handleChange}
+        />
       </Stack>
     </Stack>
   );
