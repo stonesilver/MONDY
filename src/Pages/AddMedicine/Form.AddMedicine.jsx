@@ -4,6 +4,8 @@ import Stack from '@mui/material/Stack';
 import CustomInput from '../../components/base/CustomInput';
 import CustomSelect from '../../components/base/Select';
 import { Typography } from '@mui/material';
+import CustomTextArea from '../../components/base/CustomTextArea';
+import Button from '../../components/base/Button';
 
 const AddMedicineForm = () => {
   const [name, setName] = useState('');
@@ -16,8 +18,19 @@ const AddMedicineForm = () => {
   const handleChange = (event, setState) => {
     setState(event.target.value);
   };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert('Medicine saved');
+  };
+
   return (
-    <Stack spacing={3} component='form' sx={{ width: '70%', mt: 3 }}>
+    <Stack
+      spacing={3}
+      component='form'
+      sx={{ width: '70%', mt: 3 }}
+      onSubmit={handleSubmit}
+    >
       <Stack direction='row' spacing={4}>
         <CustomInput
           label='Medicine Name'
@@ -49,6 +62,26 @@ const AddMedicineForm = () => {
           handleChange={(e) => handleChange(e, setQuantity)}
         />
       </Stack>
+      <CustomTextArea
+        label='How to Use'
+        value={use}
+        handleChange={(e) => handleChange(e, setUse)}
+      />
+      <CustomTextArea
+        label='Side Effects'
+        value={effect}
+        handleChange={(e) => handleChange(e, setEffect)}
+      />
+      <Box sx={{ width: 'fit-content' }}>
+        <Button
+          variant='contained'
+          size='large'
+          bgColor='red.main'
+          textColor='white.main'
+          type='submit'
+          text='Save Details'
+        />
+      </Box>
     </Stack>
   );
 };

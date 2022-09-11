@@ -7,6 +7,7 @@ const TButton = ({
   textColor,
   size,
   variant,
+  type,
   handleClick,
   ...props
 }) => {
@@ -15,6 +16,7 @@ const TButton = ({
       variant={variant}
       startIcon={icon ? icon : null}
       size={size}
+      type={type}
       sx={{
         bgcolor: bgColor,
         color: textColor,
@@ -31,6 +33,7 @@ const TButton = ({
 TButton.defaultProps = {
   textColor: 'white.main',
   size: 'large',
+  type: 'button',
   handleClick: () => {},
 };
 

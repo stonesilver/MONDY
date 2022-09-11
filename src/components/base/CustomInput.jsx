@@ -13,7 +13,6 @@ const CustomInput = ({ label, value, name, handleChange }) => {
         value={value}
         onChange={handleChange}
         sx={{
-          backgroundColor: '#E3EBF3',
           mt: 1,
           borderRadius: '4px',
           '& .MuiInputBase-root': {
