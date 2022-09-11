@@ -36,11 +36,14 @@ const SearchFilter = () => {
         sx={{ width: 'fit-content' }}
       >
         <FilterIcon />
-        <CustomSelect
-          options={['Group One', 'Group Two', 'Group Three']}
-          option={option}
-          handleChange={handleChange}
-        />
+
+        <Box sx={{ minWidth: 217 }}>
+          <CustomSelect
+            options={['Group One', 'Group Two', 'Group Three']}
+            value={option}
+            handleChange={handleChange}
+          />
+        </Box>
       </Stack>
     </Stack>
   );

@@ -15,8 +15,12 @@ const CustomInput = ({ label, value, name, handleChange }) => {
         sx={{
           backgroundColor: '#E3EBF3',
           mt: 1,
-          outline: '1px solid #1D242E5d',
           borderRadius: '4px',
+          '& .MuiInputBase-root': {
+            backgroundColor: '#E3EBF3 !important',
+            height: 38,
+            border: '1px solid #1D242E5d',
+          },
         }}
       />
     </Box>
