@@ -8,13 +8,15 @@ const CustomTextArea = ({ label, value, handleChange }) => {
       <Typography mb={1}>{label}</Typography>
       <TextareaAutosize
         value={value}
-        handleChange={handleChange}
+        onChange={handleChange}
         aria-label='textarea'
         style={{
           width: '100%',
           height: 96,
           backgroundColor: '#E3EBF3',
+          color: '#1D242E',
           borderRadius: '4px',
+          padding: '0.5rem 1rem',
         }}
       />
     </Box>
