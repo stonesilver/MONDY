@@ -9,7 +9,7 @@ const TitleBar = () => {
       alignItems='center'
     >
       <PageTitle
-        options={['Dashboard', 'List of Medicines', 'Add New Medicine']}
+        options={['Inventory', 'List of Medicines', 'Add New Medicine']}
         subtitle='*All fields are mandatory, except mentioned as (optional).'
       />
     </Stack>

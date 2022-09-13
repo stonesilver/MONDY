@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import CustomInput from '../../components/base/CustomInput';
-import CustomSelect from '../../components/base/Select';
+import CustomInput from './base/CustomInput';
+import CustomSelect from './base/Select';
 import { Typography } from '@mui/material';
-import CustomTextArea from '../../components/base/CustomTextArea';
-import Button from '../../components/base/Button';
+import CustomTextArea from './base/CustomTextArea';
+import Button from './base/Button';
 
-const AddMedicineForm = ({ initData, handleSubmit }) => {
+const AddMedicineForm = ({ initData, handleSubmit, submitBtnText }) => {
   const [formData, setFormData] = useState(initData);
 
   const handleChange = (event) => {
@@ -73,7 +73,7 @@ const AddMedicineForm = ({ initData, handleSubmit }) => {
           bgColor='red.main'
           textColor='white.main'
           type='submit'
-          text='Save Details'
+          text={submitBtnText}
         />
       </Box>
     </Stack>

@@ -9,6 +9,7 @@ import PageNotFound from './Layout/PageNotFound';
 import MedicineList from './Pages/MedicineList/MedicineList';
 import MedicineDetail from './Pages/MedicineDetail/MedicineDetail';
 import AddMedicine from './Pages/AddMedicine/AddMedicine';
+import EditMedicineDetails from './Pages/EditMedicineDetails/EditMedicineDetails';
 
 const InventoryOutlet = () => (
   <>
@@ -32,6 +33,10 @@ const App = () => {
             element={<MedicineDetail />}
           />
           <Route path='medicine-list/add-medicine' element={<AddMedicine />} />
+          <Route
+            path='medicine-list/edit-medicine/:medicineName'
+            element={<EditMedicineDetails />}
+          />
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes>

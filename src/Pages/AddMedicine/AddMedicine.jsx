@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import TitleBar from './TitleBar.AddMedicine';
-import AddMedicineForm from './Form.AddMedicine';
+import AddMedicineForm from '../../components/Form.AddMedicine';
 
 const initData = {
   name: '',
@@ -20,7 +20,11 @@ const AddMedicine = () => {
   return (
     <Box px={5}>
       <TitleBar />
-      <AddMedicineForm initData={initData} handleSubmit={handleSubmit} />
+      <AddMedicineForm
+        initData={initData}
+        handleSubmit={handleSubmit}
+        submitBtnText='Save Details'
+      />
     </Box>
   );
 };
