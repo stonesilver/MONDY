@@ -7,21 +7,12 @@ import { Typography } from '@mui/material';
 import CustomTextArea from '../../components/base/CustomTextArea';
 import Button from '../../components/base/Button';
 
-const AddMedicineForm = () => {
-  const [name, setName] = useState('');
-  const [ID, setID] = useState('');
-  const [group, setGroup] = useState('- Select Group -');
-  const [quantity, setQuantity] = useState('');
-  const [use, setUse] = useState('');
-  const [effect, setEffect] = useState('');
+const AddMedicineForm = ({ initData, handleSubmit }) => {
+  const [formData, setFormData] = useState(initData);
 
-  const handleChange = (event, setState) => {
-    setState(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert('Medicine saved');
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevS) => ({ ...prevS, [name]: value }));
   };
 
   return (
@@ -35,14 +26,14 @@ const AddMedicineForm = () => {
         <CustomInput
           label='Medicine Name'
           name='name'
-          value={name}
-          handleChange={(e) => handleChange(e, setName)}
+          value={formData.name}
+          handleChange={handleChange}
         />
         <CustomInput
           label='Medicine ID'
           name='ID'
-          value={ID}
-          handleChange={(e) => handleChange(e, setID)}
+          value={formData.ID}
+          handleChange={handleChange}
         />
       </Stack>
       <Stack direction='row' spacing={4}>
@@ -50,27 +41,30 @@ const AddMedicineForm = () => {
           <Typography mb={1}>Medicine Group</Typography>
           <CustomSelect
             options={['Group One', 'Group Two', 'Group Three']}
-            value={group}
-            handleChange={(e) => handleChange(e, setGroup)}
+            value={formData.group}
+            name='group'
+            handleChange={handleChange}
             bgcolor='#E3EBF3'
           />
         </Box>
         <CustomInput
           label='Quantity in Number'
           name='quantity'
-          value={quantity}
-          handleChange={(e) => handleChange(e, setQuantity)}
+          value={formData.quantity}
+          handleChange={handleChange}
         />
       </Stack>
       <CustomTextArea
         label='How to Use'
-        value={use}
-        handleChange={(e) => handleChange(e, setUse)}
+        value={formData.use}
+        name='use'
+        handleChange={handleChange}
       />
       <CustomTextArea
         label='Side Effects'
-        value={effect}
-        handleChange={(e) => handleChange(e, setEffect)}
+        value={formData.effect}
+        name='effect'
+        handleChange={handleChange}
       />
       <Box sx={{ width: 'fit-content' }}>
         <Button

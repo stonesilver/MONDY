@@ -2,12 +2,13 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 
-const CustomTextArea = ({ label, value, handleChange }) => {
+const CustomTextArea = ({ label, value, name, handleChange }) => {
   return (
     <Box>
       <Typography mb={1}>{label}</Typography>
       <TextareaAutosize
         value={value}
+        name={name}
         onChange={handleChange}
         aria-label='textarea'
         style={{

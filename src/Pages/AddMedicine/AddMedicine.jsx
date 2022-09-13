@@ -2,11 +2,25 @@ import Box from '@mui/material/Box';
 import TitleBar from './TitleBar.AddMedicine';
 import AddMedicineForm from './Form.AddMedicine';
 
+const initData = {
+  name: '',
+  ID: '',
+  group: '- Select Group -',
+  quantity: '',
+  use: '',
+  effect: '',
+};
+
 const AddMedicine = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert('Medicine saved');
+  };
+
   return (
     <Box px={5}>
       <TitleBar />
-      <AddMedicineForm />
+      <AddMedicineForm initData={initData} handleSubmit={handleSubmit} />
     </Box>
   );
 };
