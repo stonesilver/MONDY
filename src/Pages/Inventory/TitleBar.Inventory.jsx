@@ -1,8 +1,7 @@
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '../../components/base/Button';
 import PageTitle from '../../components/PageTitle';
+import { ReactComponent as AddIcon } from '../../assets/svg/add.svg';
 
 const TitleBar = () => {
   return (
@@ -18,10 +17,11 @@ const TitleBar = () => {
       />
       <Button
         variant='contained'
+        icon={<AddIcon />}
         size='large'
         bgColor='red.main'
         textColor='white.main'
-        text='+ Add New Item'
+        text='Add New Item'
       />
     </Stack>
   );
