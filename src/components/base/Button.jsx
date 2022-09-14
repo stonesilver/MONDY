@@ -20,6 +20,10 @@ const TButton = ({
       sx={{
         bgcolor: bgColor,
         color: textColor,
+        border: (t) =>
+          `1px solid ${
+            variant === 'outlined' ? t.palette[textColor] : t.palette[bgColor]
+          }`,
         ...props,
         '&:hover': { bgcolor: bgColor, transform: 'scale(1.03)', ...props },
       }}

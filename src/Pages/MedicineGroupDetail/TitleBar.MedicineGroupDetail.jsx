@@ -1,7 +1,7 @@
 import Stack from '@mui/material/Stack';
 import Button from '../../components/base/Button';
 import PageTitle from '../../components/PageTitle';
-import { ReactComponent as EditIcon } from '../../assets/svg/edit.svg';
+import { ReactComponent as AddIcon } from '../../assets/svg/add.svg';
 import { useParams } from 'react-router-dom';
 
 const TitleBar = () => {
@@ -21,10 +21,10 @@ const TitleBar = () => {
       <Button
         variant='contained'
         size='large'
-        icon={<EditIcon />}
+        icon={<AddIcon />}
         bgColor='red.main'
         textColor='white.main'
-        text='+ Medicine'
+        text='Medicine'
         handleClick={handleClick}
       />
     </Stack>
