@@ -3,18 +3,21 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+import { ReactComponent as CloseIcon } from '../assets/svg/close-circle.svg';
 
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  width: 567,
+  height: 271,
+  bgcolor: 'white.main',
   boxShadow: 24,
-  p: 4,
+  borderRadius: '4px',
+  p: 1,
 };
 
 const AddMedicineToGroupModal = ({ open, handleOpen, handleClose }) => {
@@ -34,8 +37,11 @@ const AddMedicineToGroupModal = ({ open, handleOpen, handleClose }) => {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography id='transition-modal-title' variant='h6' component='h2'>
-              Text in a modal
+            <IconButton sx={{ float: 'right' }}>
+              <CloseIcon />
+            </IconButton>
+            <Typography variant='h5' component='h2'>
+              Add Medicine
             </Typography>
             <Typography id='transition-modal-description' sx={{ mt: 2 }}>
               Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
