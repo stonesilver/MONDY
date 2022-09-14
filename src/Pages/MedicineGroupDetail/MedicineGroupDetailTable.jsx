@@ -13,6 +13,7 @@ import {
   medicineGroupDetailTableTitle,
   headerStyle,
 } from '../../assets/data';
+import { ReactComponent as DeleteIcon } from '../../assets/svg/delete.svg';
 import { Link } from 'react-router-dom';
 
 const MedicineGroupDetailTable = () => {
@@ -26,6 +27,10 @@ const MedicineGroupDetailTable = () => {
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
+  };
+
+  const handleRemove = () => {
+    alert('Medicine Removed 😁');
   };
 
   return (
@@ -49,16 +54,24 @@ const MedicineGroupDetailTable = () => {
           {/* Table body */}
           <TableBody>
             {medicineGroupDetailRows.map(
-              ({ groupName, NoOfMedicine, action }, index) => (
+              ({ medicineName, NoOfMedicine, action }, index) => (
                 <TableRow
                   key={index}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell>{groupName}</TableCell>
+                  <TableCell>{medicineName}</TableCell>
                   <TableCell>{NoOfMedicine}</TableCell>
-                  <Link to={`${groupName.replaceAll(' ', '-')}`}>
-                    <TableCell sx={{ color: 'red.main' }}>{action}</TableCell>
-                  </Link>
+                  <TableCell
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      color: 'red.main',
+                      cursor: 'pointer',
+                    }}
+                    onClick={handleRemove}
+                  >
+                    <DeleteIcon style={{ marginRight: '5px' }} /> {action}
+                  </TableCell>
                 </TableRow>
               )
             )}

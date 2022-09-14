@@ -17,6 +17,12 @@ const createMedicinegroupData = (groupName, NoOfMedicine) => ({
   action: 'View Full Detail',
 });
 
+const createMedicinegroupDetailData = (medicineName, NoOfMedicine) => ({
+  medicineName,
+  NoOfMedicine,
+  action: 'Remove from Group',
+});
+
 export const medicineListRows = [
   createMedicineListData(
     'Augmentin 625 Duo Tablet',
@@ -69,8 +75,8 @@ export const medicineGroupRows = [
 ];
 
 export const medicineGroupDetailRows = [
-  createMedicinegroupData('Augmentin 625 Duo Tablet', 22),
-  createMedicinegroupData('Azithral 500 Tablet', 8),
+  createMedicinegroupDetailData('Augmentin 625 Duo Tablet', 22),
+  createMedicinegroupDetailData('Azithral 500 Tablet', 8),
 ];
 
 export const medicineListTableTitle = [
