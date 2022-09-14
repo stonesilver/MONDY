@@ -1,15 +1,27 @@
+import { useState } from 'react';
 import Stack from '@mui/material/Stack';
 import Button from '../../components/base/Button';
 import PageTitle from '../../components/PageTitle';
 import { ReactComponent as AddIcon } from '../../assets/svg/add.svg';
 import { useParams } from 'react-router-dom';
+import AddMedicineToGroupModal from '../../components/AddMedicineToGroupModal';
 
 const TitleBar = () => {
+  const [open, setOpen] = useState(false);
+
   const { medicineName } = useParams();
-  const handleClick = () => {};
+
+  const handleOpen = () => setOpen(true);
+
+  const handleClose = () => setOpen(false);
 
   return (
     <Stack direction='row' justifyContent='space-between' alignItems='center'>
+      <AddMedicineToGroupModal
+        open={open}
+        handleOpen={handleOpen}
+        handleClose={handleClose}
+      />
       <PageTitle
         options={[
           'Inventory',
@@ -24,8 +36,8 @@ const TitleBar = () => {
         icon={<AddIcon />}
         bgColor='red.main'
         textColor='white.main'
-        text='Medicine'
-        handleClick={handleClick}
+        text='Add Medicine'
+        handleClick={handleOpen}
       />
     </Stack>
   );
