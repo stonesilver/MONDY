@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import { ReactComponent as ChevronDown } from '../../assets/svg/chevron-down.svg';
+import { ReactComponent as ChevronDown } from '../assets/svg/chevron-down.svg';
 
 const SortOrderIcon = () => (
   <Box

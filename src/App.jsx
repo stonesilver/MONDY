@@ -10,7 +10,8 @@ import MedicineList from './Pages/MedicineList/MedicineList';
 import MedicineDetail from './Pages/MedicineDetail/MedicineDetail';
 import AddMedicine from './Pages/AddMedicine/AddMedicine';
 import EditMedicineDetails from './Pages/EditMedicineDetails/EditMedicineDetails';
-import MedicineGroup from './Pages/MedicineGroup/MedicineGroup';
+import MedicineGroup from './Pages/MedicinesGroup/MedicinesGroup';
+import MedicineGroupDetail from './Pages/MedicineGroupDetail/MedicineGroupDetail';
 
 const InventoryOutlet = () => (
   <>
@@ -30,6 +31,10 @@ const App = () => {
           <Route index element={<Inventory />} />
           <Route path='medicine-list' element={<MedicineList />} />
           <Route path='Medicine-groups' element={<MedicineGroup />} />
+          <Route
+            path='Medicine-groups/:medicineName'
+            element={<MedicineGroupDetail />}
+          />
           <Route
             path='medicine-list/:medicineName/:medicineID'
             element={<MedicineDetail />}

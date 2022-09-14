@@ -9,13 +9,13 @@ import TablePagination from '@mui/material/TablePagination';
 import Paper from '@mui/material/Paper';
 import SortOrderIcon from '../../components/SortOrderIcon';
 import {
-  medicineListRows,
-  medicineListTableTitle,
+  medicineGroupDetailRows,
+  medicineGroupDetailTableTitle,
   headerStyle,
 } from '../../assets/data';
 import { Link } from 'react-router-dom';
 
-const MedicineListTable = () => {
+const MedicineGroupDetailTable = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
@@ -35,10 +35,10 @@ const MedicineListTable = () => {
           {/* Table head */}
           <TableHead>
             <TableRow>
-              {medicineListTableTitle.map((item, index) => (
+              {medicineGroupDetailTableTitle.map((item, index) => (
                 <TableCell key={item} sx={headerStyle}>
                   {item}{' '}
-                  {index + 1 !== medicineListTableTitle.length && (
+                  {index + 1 !== medicineGroupDetailTableTitle.length && (
                     <SortOrderIcon />
                   )}
                 </TableCell>
@@ -48,20 +48,16 @@ const MedicineListTable = () => {
 
           {/* Table body */}
           <TableBody>
-            {medicineListRows.map(
-              ({ medicineName, id, groupName, quantityInStock, action }) => (
+            {medicineGroupDetailRows.map(
+              ({ groupName, NoOfMedicine, action }, index) => (
                 <TableRow
-                  key={id}
+                  key={index}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell component='th' scope='row'>
-                    {medicineName}
-                  </TableCell>
-                  <TableCell>{id}</TableCell>
                   <TableCell>{groupName}</TableCell>
-                  <TableCell>{quantityInStock}</TableCell>
-                  <Link to={`${medicineName.replaceAll(' ', '_')}/${id}`}>
-                    <TableCell>{action}</TableCell>
+                  <TableCell>{NoOfMedicine}</TableCell>
+                  <Link to={`${groupName.replaceAll(' ', '-')}`}>
+                    <TableCell sx={{ color: 'red.main' }}>{action}</TableCell>
                   </Link>
                 </TableRow>
               )
@@ -74,7 +70,7 @@ const MedicineListTable = () => {
       <TablePagination
         rowsPerPageOptions={[10, 25, 100]}
         component='div'
-        count={medicineListRows.length}
+        count={medicineGroupDetailRows.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}
@@ -84,4 +80,4 @@ const MedicineListTable = () => {
   );
 };
 
-export default MedicineListTable;
+export default MedicineGroupDetailTable;
