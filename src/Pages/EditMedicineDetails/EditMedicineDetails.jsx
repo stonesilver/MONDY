@@ -36,6 +36,7 @@ const EditMedicineDetails = () => {
         initData={initData}
         handleSubmit={handleSubmit}
         submitBtnText='Edit Details'
+        btnBgColor='blue.main'
       />
     </Box>
   );

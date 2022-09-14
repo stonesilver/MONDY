@@ -24,6 +24,7 @@ const AddMedicine = () => {
         initData={initData}
         handleSubmit={handleSubmit}
         submitBtnText='Save Details'
+        btnBgColor='red.main'
       />
     </Box>
   );

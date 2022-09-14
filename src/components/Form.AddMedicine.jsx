@@ -7,7 +7,12 @@ import { Typography } from '@mui/material';
 import CustomTextArea from './base/CustomTextArea';
 import Button from './base/Button';
 
-const AddMedicineForm = ({ initData, handleSubmit, submitBtnText }) => {
+const MedicineForm = ({
+  initData,
+  handleSubmit,
+  submitBtnText,
+  btnBgColor,
+}) => {
   const [formData, setFormData] = useState(initData);
 
   const handleChange = (event) => {
@@ -70,7 +75,7 @@ const AddMedicineForm = ({ initData, handleSubmit, submitBtnText }) => {
         <Button
           variant='contained'
           size='large'
-          bgColor='red.main'
+          bgColor={btnBgColor}
           textColor='white.main'
           type='submit'
           text={submitBtnText}
@@ -80,4 +85,4 @@ const AddMedicineForm = ({ initData, handleSubmit, submitBtnText }) => {
   );
 };
 
-export default AddMedicineForm;
+export default MedicineForm;
