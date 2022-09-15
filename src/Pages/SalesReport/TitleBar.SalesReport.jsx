@@ -12,8 +12,8 @@ const TitleBar = () => {
       px={5}
     >
       <PageTitle
-        options={['Dashboard']}
-        subtitle='A quick data overview of the inventory.'
+        options={['Reports', 'Sales Report']}
+        subtitle='Sales related report of the pharmacy.'
       />
       <Box sx={{ border: '1px solid gray', borderRadius: '4px' }}>
         <DownloadReport />
