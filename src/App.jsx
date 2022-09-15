@@ -12,8 +12,15 @@ import AddMedicine from './Pages/AddMedicine/AddMedicine';
 import EditMedicineDetails from './Pages/EditMedicineDetails/EditMedicineDetails';
 import MedicineGroup from './Pages/MedicinesGroup/MedicinesGroup';
 import MedicineGroupDetail from './Pages/MedicineGroupDetail/MedicineGroupDetail';
+import Reports from './Pages/Reports/Reports';
 
 const InventoryOutlet = () => (
+  <>
+    <Outlet />
+  </>
+);
+
+const ReportsOutlet = () => (
   <>
     <Outlet />
   </>
@@ -44,6 +51,9 @@ const App = () => {
             path='medicine-list/edit-medicine/:medicineName'
             element={<EditMedicineDetails />}
           />
+        </Route>
+        <Route path='reports' element={<ReportsOutlet />}>
+          <Route index element={<Reports />} />
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes>
