@@ -57,7 +57,7 @@ const MedicineGroupsTable = () => {
                   <TableCell>{groupName}</TableCell>
                   <TableCell>{NoOfMedicine}</TableCell>
                   <Link to={`${groupName.replaceAll(' ', '-')}`}>
-                    <TableCell>{action}</TableCell>
+                    <TableCell sx={{ display: 'flex' }}>{action}</TableCell>
                   </Link>
                 </TableRow>
               )
