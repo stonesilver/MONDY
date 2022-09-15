@@ -13,6 +13,7 @@ import EditMedicineDetails from './Pages/EditMedicineDetails/EditMedicineDetails
 import MedicineGroup from './Pages/MedicinesGroup/MedicinesGroup';
 import MedicineGroupDetail from './Pages/MedicineGroupDetail/MedicineGroupDetail';
 import Reports from './Pages/Reports/Reports';
+import SalesReport from './Pages/SalesReport/SalesReport';
 
 const InventoryOutlet = () => (
   <>
@@ -54,6 +55,7 @@ const App = () => {
         </Route>
         <Route path='reports' element={<ReportsOutlet />}>
           <Route index element={<Reports />} />
+          <Route path='sales-report' element={<SalesReport />} />
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes>

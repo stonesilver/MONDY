@@ -2,13 +2,12 @@ import { useState } from 'react';
 import Menu from '@mui/material/Menu';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
-import { ReactComponent as ChevronDownIcon } from '../../assets/svg/chevron-down.svg';
-import { ReactComponent as ExcelIcon } from '../../assets/svg/excel.svg';
-import { ReactComponent as PdfIcon } from '../../assets/svg/pdf.svg';
+import { ReactComponent as ChevronDownIcon } from '../assets/svg/chevron-down.svg';
+import { ReactComponent as ExcelIcon } from '../assets/svg/excel.svg';
+import { ReactComponent as PdfIcon } from '../assets/svg/pdf.svg';
 
 const items = [
   {

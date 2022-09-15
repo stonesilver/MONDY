@@ -17,6 +17,7 @@ const PageNotFound = () => {
         height: 'calc(100% - 60px)',
       }}
     >
+      <img src='/img/squinting-face-with-tongue.gif' alt='' />
       <Typography variant='h4'>
         COMRADE!!! HOW DID YOU GET TO THE ICU? 🙄
       </Typography>

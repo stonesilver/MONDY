@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import DownloadReport from './DownloadReport';
+import DownloadReport from '../../components/DownloadReport';
 import PageTitle from '../../components/PageTitle';
 
 const TitleBar = () => {
