@@ -10,6 +10,7 @@ const inventory = [
     body: 'Total Sales Report ',
     caption: 'View Detailed Report',
     color: '#FED6005d',
+    link: '/reports/sales-report',
   },
   {
     icon: <MedicalIcon style={{ fill: '#03A9F5' }} />,
@@ -17,13 +18,14 @@ const inventory = [
     body: 'Payment Report',
     caption: 'View Full List',
     color: '#03A9F55d',
+    link: '/reports/payment-report',
   },
 ];
 
 const ReportsList = () => {
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, mt: 4 }}>
-      {inventory.map(({ icon, bold, body, caption, color }) => (
+      {inventory.map(({ icon, bold, body, caption, color, link }) => (
         <Box key={body} sx={{ width: 'calc(25% - 24px)' }}>
           <StatItem
             key={bold}
@@ -32,6 +34,7 @@ const ReportsList = () => {
             body={body}
             caption={caption}
             color={color}
+            link={link}
           />
         </Box>
       ))}
