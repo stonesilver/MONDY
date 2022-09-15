@@ -9,7 +9,6 @@ const TitleBar = () => {
       direction='row'
       justifyContent='space-between'
       alignItems='center'
-      px={5}
     >
       <PageTitle
         options={['Reports', 'Sales Report']}

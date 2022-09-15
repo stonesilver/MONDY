@@ -37,8 +37,8 @@ const menuItems = [
     name: 'Reports',
     icon: <ReportIcon />,
     subItem: [
-      { name: 'Sales Report', link: '/report/sales-report' },
-      { name: 'Payment Report', link: '/report/payment-report' },
+      { name: 'Sales Report', link: '/reports/sales-report' },
+      { name: 'Payment Report', link: '/reports/payment-report' },
     ],
   },
   {
