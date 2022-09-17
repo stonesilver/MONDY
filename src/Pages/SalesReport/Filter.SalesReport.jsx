@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CustomSelect from '../../components/base/Select';
+import DateRange from '../../components/base/DateRange';
 
 const SalesReportFilter = () => {
   const [state, setState] = useState({
@@ -20,7 +21,10 @@ const SalesReportFilter = () => {
     <Box
       sx={{ display: 'flex', justifyContent: 'space-between', gap: 3, mt: 2 }}
     >
-      <Box sx={{ flex: '40%', height: 40, border: '1px solid gray' }}></Box>
+      <Box sx={{ flex: '40%' }}>
+        <Typography mb='3px'>Date Range</Typography>
+        <DateRange />
+      </Box>
       <Box sx={{ flex: '35%' }}>
         <Typography mb='3px'>Medicine Group</Typography>
         <CustomSelect

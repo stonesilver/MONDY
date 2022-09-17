@@ -1,32 +1,30 @@
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
-import { LocalizationProvider } from '@mui/x-date-pickers-pro';
-import { AdapterDayjs } from '@mui/x-date-pickers-pro/AdapterDayjs';
+import moment from 'moment';
+import Stack from '@mui/material/Stack';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
-import { MobileDateRangePicker } from '@mui/x-date-pickers-pro/MobileDateRangePicker';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 
 const DateRange = () => {
-  const [value, setValue] = useState([null, null]);
+  const [value, setValue] = useState(moment().format());
 
   return (
-    <LocalizationProvider
-      dateAdapter={AdapterMoment}
-      localeText={{ start: 'Mobile start', end: 'Mobile end' }}
-    >
-      <MobileDateRangePicker
-        value={value}
-        onChange={(newValue) => {
-          setValue(newValue);
-        }}
-        renderInput={(startProps, endProps) => (
-          <>
-            <TextField {...startProps} />
-            <Box sx={{ mx: 2 }}> - </Box>
-            <TextField {...endProps} />
-          </>
-        )}
-      />
+    <LocalizationProvider dateAdapter={AdapterMoment}>
+      <Stack spacing={3}>
+        <MobileDatePicker
+          value={moment(value).format('LL')}
+          onChange={(newValue) => {
+            setValue(newValue);
+          }}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              sx={{ '& .MuiInputBase-input': { height: 8 } }}
+            />
+          )}
+        />
+      </Stack>
     </LocalizationProvider>
   );
 };

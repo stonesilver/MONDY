@@ -13,10 +13,12 @@
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.3",
     "@mui/x-date-pickers": "^5.0.1",
+    "d3-shape": "^3.1.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
+    "recharts": "^2.1.14",
     "vite-plugin-svgr": "^2.2.1"
   },
   "devDependencies": {
