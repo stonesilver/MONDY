@@ -17,7 +17,7 @@ const SalesChart = () => {
     <StatsGridCard category='Sales Made' bgColor='white.main'>
       <AreaChart
         width={500}
-        height={400}
+        height={325}
         data={chartData}
         margin={{
           top: 32,
