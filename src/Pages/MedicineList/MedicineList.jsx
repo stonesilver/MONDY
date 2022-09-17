@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import MedicineListTable from './MedicineListTable';
 import SearchFilter from './SearchFilter';
-import TitleBar from './TitleBar.medicineList';
+import TitleBar from './TitleBar.MedicineList';
 
 const MedicineList = () => {
   return (
