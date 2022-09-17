@@ -24,7 +24,7 @@ const SalesReportFilter = () => {
       <Box sx={{ flex: '35%' }}>
         <Typography mb='3px'>Medicine Group</Typography>
         <CustomSelect
-          options={[]}
+          options={['Group One', 'Group Two', 'group Three']}
           value={medicineGroup}
           placeholder='- Select Group -'
           name='medicineGroup'
@@ -35,7 +35,7 @@ const SalesReportFilter = () => {
       <Box sx={{ flex: '25%' }}>
         <Typography mb='3px'>User Name</Typography>
         <CustomSelect
-          options={[]}
+          options={['Subash', 'John', 'Sally']}
           value={userName}
           placeholder='- Select User Name -'
           name='userName'
