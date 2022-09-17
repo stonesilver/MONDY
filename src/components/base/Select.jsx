@@ -2,7 +2,14 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const CustomSelect = ({ options, value, name, handleChange, bgcolor }) => {
+const CustomSelect = ({
+  options,
+  value,
+  name,
+  handleChange,
+  bgcolor,
+  placeholder,
+}) => {
   return (
     <FormControl fullWidth sx={{ bgcolor }}>
       <Select
@@ -13,8 +20,8 @@ const CustomSelect = ({ options, value, name, handleChange, bgcolor }) => {
         onChange={handleChange}
         sx={{ maxHeight: 38 }}
       >
-        <MenuItem disabled value='- Select Group -'>
-          <em>- Select Group -</em>
+        <MenuItem disabled value={placeholder}>
+          <em>{placeholder}</em>
         </MenuItem>
         {options.map((item) => (
           <MenuItem key={item} value={item}>

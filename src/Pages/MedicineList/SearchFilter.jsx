@@ -41,6 +41,7 @@ const SearchFilter = () => {
           <CustomSelect
             options={['Group One', 'Group Two', 'Group Three']}
             value={option}
+            placeholder='- Select Group -'
             handleChange={handleChange}
           />
         </Box>
