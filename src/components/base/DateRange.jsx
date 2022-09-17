@@ -20,7 +20,12 @@ const DateRange = () => {
           renderInput={(params) => (
             <TextField
               {...params}
-              sx={{ '& .MuiInputBase-input': { height: 8 } }}
+              sx={{
+                '& .MuiInputBase-input': {
+                  height: 8,
+                  bgcolor: '#b7c1ca6e',
+                },
+              }}
             />
           )}
         />
