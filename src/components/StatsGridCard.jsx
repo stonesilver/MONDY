@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import { ReactComponent as ForwardIcon } from '../assets/svg/forward.svg';
 
 const StatsGridCard = ({
+  customHeader,
   category,
   more,
   details,
@@ -29,9 +30,12 @@ const StatsGridCard = ({
           borderBottom: (t) => `1px solid ${t.palette.secondary.main}4d`,
         }}
       >
-        <Typography sx={{ fontSize: '1rem', fontWeight: 600 }}>
-          {category}
-        </Typography>
+        {customHeader && customHeader}
+        {category && (
+          <Typography sx={{ fontSize: '1rem', fontWeight: 600 }}>
+            {category}
+          </Typography>
+        )}
         {more && (
           <Typography sx={{ fontSize: '0.75rem' }}>
             {more} <ForwardIcon style={{ marginLeft: '4px' }} />
@@ -60,8 +64,8 @@ const StatsGridCard = ({
   );
 };
 
-StatsGridCard.defaultProps ={
-  bgColor: 'transparent'
-}
+StatsGridCard.defaultProps = {
+  bgColor: 'transparent',
+};
 
 export default StatsGridCard;

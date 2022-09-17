@@ -1,12 +1,12 @@
-import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 const OrderRow = ({ id, date }) => {
   return (
-    <Stack direction='row' justifyContent='space-between'>
-      <Typography>{id}</Typography>
-      <Typography>{date}</Typography>
-    </Stack>
+    <Box sx={{ display: 'flex' }}>
+      <Typography sx={{ flex: '1' }}>{id}</Typography>
+      <Typography sx={{ flex: '1' }}>{date}</Typography>
+    </Box>
   );
 };
 
