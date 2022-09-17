@@ -3,6 +3,7 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import { LocalizationProvider } from '@mui/x-date-pickers-pro';
 import { AdapterDayjs } from '@mui/x-date-pickers-pro/AdapterDayjs';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { MobileDateRangePicker } from '@mui/x-date-pickers-pro/MobileDateRangePicker';
 
 const DateRange = () => {
@@ -10,7 +11,7 @@ const DateRange = () => {
 
   return (
     <LocalizationProvider
-      dateAdapter={AdapterDayjs}
+      dateAdapter={AdapterMoment}
       localeText={{ start: 'Mobile start', end: 'Mobile end' }}
     >
       <MobileDateRangePicker
