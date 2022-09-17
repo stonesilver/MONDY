@@ -3,12 +3,20 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { ReactComponent as ForwardIcon } from '../assets/svg/forward.svg';
 
-const StatsGridCard = ({ category, more, details, text }) => {
+const StatsGridCard = ({
+  category,
+  more,
+  details,
+  text,
+  bgColor,
+  children,
+}) => {
   return (
     <Box
       sx={{
         border: (t) => `1px solid ${t.palette.secondary.main}4d`,
         borderRadius: '4px',
+        bgcolor: bgColor,
       }}
     >
       <Stack
@@ -47,8 +55,13 @@ const StatsGridCard = ({ category, more, details, text }) => {
           {text}
         </Typography>
       )}
+      <Box>{children}</Box>
     </Box>
   );
 };
+
+StatsGridCard.defaultProps ={
+  bgColor: 'transparent'
+}
 
 export default StatsGridCard;
