@@ -19,7 +19,13 @@ const SalesReportFilter = () => {
 
   return (
     <Box
-      sx={{ display: 'flex', justifyContent: 'space-between', gap: 3, mt: 2 }}
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        gap: 3,
+        mt: 2,
+        mb: 5,
+      }}
     >
       <Box sx={{ flex: '40%' }}>
         <Typography mb='3px'>Date Range</Typography>

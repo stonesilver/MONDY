@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import SalesReportFilter from './Filter.SalesReport';
-import SalesChart from './SalesChart';
+import SalesMadeAndOrders from './SalesMadeAndOrders';
 import TitleBar from './TitleBar.SalesReport';
 
 const SalesReport = () => {
@@ -8,7 +8,7 @@ const SalesReport = () => {
     <Box px={5}>
       <TitleBar />
       <SalesReportFilter />
-      <SalesChart />
+      <SalesMadeAndOrders />
     </Box>
   );
 };
